@@ -1,0 +1,41 @@
+﻿@model ASPCALC.Models.Calc
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<html>
+<head>
+</head>
+<body>
+    <h2>Simple Calculator</h2>
+
+    <div class="row">
+        @using (Html.BeginForm("/Index", "calc", FormMethod.Post))
+        {
+            <div class="formgroup">
+                <label for="no1">No 1</label>
+                <input type="text" class="form-control" id="no1" name="no1" value="@Model.number1" />
+            </div>
+            <div class="form-group">
+                <label form="no2">No 2</label>
+                <input type="text" class="form-control" id="no2" name="no1" value="@Model.number2" />
+            </div>
+            <div class="form-group">
+                <label form="total">Total</label>
+                <input type="text" class="form-control" id="tot" name="tot" value="@Model.total" />
+            </div>
+            <button type="submit" class="btn btn-info" id="add" value="add" name="calculate"> + </button>
+            <button type="submit" class="btn btn-danger" id="min" value="min" name="calculate"> - </button>
+            <button type="submit" class="btn btn-warning" id="sub" value="sub" name="calculate" +></button>
+            <button type="submit" class="btn btn-default" id="div" value="div" name="calculate" +></button>
+
+
+
+        }
+</body>
+
+
+</html>
+d
