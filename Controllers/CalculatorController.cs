@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ASPCALC.Models;
+
 using Microsoft.AspNetCore.Mvc;
 
 namespace ASPCALC.Controllers
@@ -18,19 +19,19 @@ namespace ASPCALC.Controllers
         {
             if (calculate == "add")
             {
-                c.total = c.number1 + c.number2;
+                c.tot = c.no1 + c.no2;
             }
             else if (calculate == "min")
             {
-                c.total = c.number1 - c.number2;
+                c.tot = c.no1 - c.no2;
             }
             else if (calculate == "sub")
             {
-                c.total = c.number1 * c.number2;
+                c.tot = c.no1 * c.no2;
             }
             else
             {
-                c.total = c.number1 - c.number2;
+                c.tot = c.no1 - c.no2;
             }
             return View(c);
         }
